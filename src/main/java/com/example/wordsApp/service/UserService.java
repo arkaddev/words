@@ -10,6 +10,6 @@ public interface UserService {
     User updateUser(Long id, User user);
     String deleteUser(Long id);
     User getUserById(Long id);
-    User getUserByUsername(String username) throws Exception;
+    //User getUserByUsername(String username) throws Exception;
 
 }
