@@ -63,12 +63,12 @@ public class UserServiceImpl implements UserService {
         return user;
     }
 
-    @Override
-    public User getUserByUsername(String username) throws Exception {
-        Optional<User> user = userRepository.findByUsername(username);
-        if (user != null){
-            return user.get();
-        }
-        throw new Exception("Uzytkownik: " + username + " nie zostal znaleziony.");
-    }
+//    @Override
+//    public User getUserByUsername(String username) throws Exception {
+//        Optional<User> user = userRepository.findByUsername(username);
+//        if (user != null){
+//            return user.get();
+//        }
+//        throw new Exception("Uzytkownik: " + username + " nie zostal znaleziony.");
+//    }
 }
