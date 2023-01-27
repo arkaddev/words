@@ -4,7 +4,6 @@ import com.example.wordsApp.model.User;
 import com.example.wordsApp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,6 +22,12 @@ public class UserController {
     public List<User> getAllUsers() {
 
         return userService.getAllUsers();
+    }
+
+    @GetMapping("/all")
+    public String AllUsers() {
+
+        return "Dostep dla wszytskich";
     }
 
     @PostMapping("/users/sign-up")

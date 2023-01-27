@@ -28,8 +28,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    //@Transactional
     public User createNewUser(User user) {
+
         user.setPassword(passwordEncoder.encode(user.getPassword()));
+
         return userRepository.save(user);
     }
 
